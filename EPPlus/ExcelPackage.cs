@@ -703,6 +703,8 @@ namespace OfficeOpenXml
             ns.AddNamespace("dcmitype", schemaDcmiType);
             ns.AddNamespace("xsi", schemaXsi);
             ns.AddNamespace("x14", schemaMainX14);
+            // theme namespace
+            ns.AddNamespace("a", ExcelPackage.schemaDrawings);
             return ns;
         }
 		

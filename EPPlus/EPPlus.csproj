@@ -728,6 +728,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Style\XmlAccess\ExcelThemeColor.cs" />
+    <Compile Include="ThemeColors.cs" />
     <Compile Include="Utils\CompundDocument\CompoundDocumentFile.cs" />
     <Compile Include="Utils\CompundDocument\CoumpundDocumentItem.cs" />
     <Compile Include="Utils\ConvertUtil.cs" />
