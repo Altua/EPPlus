@@ -6,6 +6,19 @@ namespace OfficeOpenXml
 {
     public sealed class ExcelTheme : XmlHelper
     {
+        private const string c_node_accent1 = "a:accent1";
+        private const string c_node_accent2 = "a:accent2";
+        private const string c_node_accent3 = "a:accent3";
+        private const string c_node_accent4 = "a:accent4";
+        private const string c_node_accent5 = "a:accent5";
+        private const string c_node_accent6 = "a:accent6";
+        private const string c_node_dk1 = "a:dk1";
+        private const string c_node_dk2 = "a:dk2";
+        private const string c_node_folHLink = "a:folHlink";
+        private const string c_node_hlink = "a:hlink";
+        private const string c_node_lt1 = "a:lt1";
+        private const string c_node_lt2 = "a:lt2";
+        private const string c_node_srgbClr = "a:srgbClr";
         private const string c_themeColorsPath = @"a:theme/a:themeElements/a:clrScheme";
 
         private readonly string[] _colors;
@@ -31,18 +44,18 @@ namespace OfficeOpenXml
 
             XmlNode colorsNode = _themeXml.SelectSingleNode(c_themeColorsPath, _nameSpaceManager);
 
-            var dk1 = colorsNode["a:dk1"]["a:srgbClr"];
-            var lt1 = colorsNode["a:lt1"]["a:srgbClr"];
-            var dk2 = colorsNode["a:dk2"]["a:srgbClr"];
-            var lt2 = colorsNode["a:lt2"]["a:srgbClr"];
-            var accent1 = colorsNode["a:accent1"]["a:srgbClr"];
-            var accent2 = colorsNode["a:accent2"]["a:srgbClr"];
-            var accent3 = colorsNode["a:accent3"]["a:srgbClr"];
-            var accent4 = colorsNode["a:accent4"]["a:srgbClr"];
-            var accent5 = colorsNode["a:accent5"]["a:srgbClr"];
-            var accent6 = colorsNode["a:accent6"]["a:srgbClr"];
-            var hlink = colorsNode["a:hlink"]["a:srgbClr"];
-            var folHlink = colorsNode["a:folHlink"]["a:srgbClr"];
+            var dk1 = colorsNode[c_node_dk1][c_node_srgbClr];
+            var lt1 = colorsNode[c_node_lt1][c_node_srgbClr];
+            var dk2 = colorsNode[c_node_dk2][c_node_srgbClr];
+            var lt2 = colorsNode[c_node_lt2][c_node_srgbClr];
+            var accent1 = colorsNode[c_node_accent1][c_node_srgbClr];
+            var accent2 = colorsNode[c_node_accent2][c_node_srgbClr];
+            var accent3 = colorsNode[c_node_accent3][c_node_srgbClr];
+            var accent4 = colorsNode[c_node_accent4][c_node_srgbClr];
+            var accent5 = colorsNode[c_node_accent5][c_node_srgbClr];
+            var accent6 = colorsNode[c_node_accent6][c_node_srgbClr];
+            var hlink = colorsNode[c_node_hlink][c_node_srgbClr];
+            var folHlink = colorsNode[c_node_folHLink][c_node_srgbClr];
 
             if (dk1 == null && lt1 == null)
             {
